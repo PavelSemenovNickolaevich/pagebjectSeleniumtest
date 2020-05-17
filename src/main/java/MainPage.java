@@ -12,7 +12,7 @@ public class MainPage {
     }
     @FindBy(xpath = "//a[@href='/login']")
     WebElement signInButton;
-    @FindBy(xpath = "//a[text()='Sign up']")
+    @FindBy(xpath = "//a[@class='HeaderMenu-link d-inline-block no-underline border border-gray-dark rounded-1 px-2 py-1']")
     WebElement singUpButton;
     @FindBy(xpath = ".//*[@id='user[login]']")
     WebElement userNameField;
