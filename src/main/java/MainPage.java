@@ -10,7 +10,7 @@ public class MainPage {
     public MainPage(WebDriver driver) {
         this.driver = driver;
     }
-    @FindBy(xpath = "//a[text()='Sign in']")
+    @FindBy(xpath = "//a[@href='/login']")
     WebElement signInButton;
     @FindBy(xpath = "//a[text()='Sign up']")
     WebElement singUpButton;
@@ -20,7 +20,7 @@ public class MainPage {
     WebElement emailField;
     @FindBy(xpath = ".//*[@id='user[password]']")
     WebElement passwordField;
-    @FindBy(css = "button.btn-mktg btn-primary-mktg btn-large-mktg f4 btn-block my-3")
+    @FindBy(xpath = "//form/button[@type='submit']")
     WebElement signUpForButton;
 
 
@@ -58,7 +58,7 @@ public class MainPage {
         this.typeUserName(username);
         this.typeEmail(email);
         this.typePassword(password);
-        this.clickSignUp();
+        this.clickSignUpForGitHubButton();
         return new SignUpPage(driver);
 
     }

@@ -14,7 +14,7 @@ public class SignUpPage {
     By usernameField = By.xpath(".//*[@id='user_login']");
     By userEmail = By.xpath(".//*[@id='user_email']");
     By userPassword = By.xpath(".//*[@id='user_password']");
-    By mainError = By.xpath(".//*[@id='user_password']/ancestor::dl/preceding-sibling::div[contains(@class, 'flash-error')]");
+    By mainError = By.xpath("//div[@class='flash flash-error my-3']");
     By userNameError = By.xpath("//input[@id='user_login']/ancestor::dd/following-sibling::dd");
     By emailError = By.xpath(".//*[@id='user_email']/ancestor::dd/following-sibling::dd");
     By passwordError = By.xpath(".//*[@id='user_password']/ancestor::dd/following-sibling::dd");
