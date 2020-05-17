@@ -9,7 +9,7 @@ public class SignUpPage {
         this.driver = driver;
     }
 
-    By heading = By.xpath("//div[@class='setup-wrapper']//h1");
+    By heading = By.xpath("//h1[@class]");
     By signUpButton = By.xpath(".//*[@id='signup button']");
     By usernameField = By.xpath(".//*[@id='user_login']");
     By userEmail = By.xpath(".//*[@id='user_email']");

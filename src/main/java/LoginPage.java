@@ -11,11 +11,11 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    By usernameOrEmailField = By.id("login_field");
+    By usernameOrEmailField = By.xpath("//input[@id='login_field']");
     By passwordField = By.id("password");
     By signInButton = By.cssSelector("input[value='Sign in']");
     By heading = By.xpath("//div[contains(@class, 'auth-form-header')]/h1");
-    By error = By.xpath("//*[@id=\"js-flash-container\"]//div/text()");
+    By error = By.xpath("//div[@class='flash flash-full flash-error ']");
     By createAnAccount = By.xpath("//a[text()='Create an account']");
 
 

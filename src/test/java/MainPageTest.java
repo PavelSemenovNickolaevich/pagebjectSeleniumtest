@@ -9,20 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.concurrent.TimeUnit;
 
-public class MainPageTest {
+public class MainPageTest extends BaseTest {
 
-    WebDriver driver;
-    MainPage mainPage;
-
-    @Before
-    public void setUp() {
-       driver = new ChromeDriver();
-       // driver  = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get("https://github.com/");
-        mainPage = PageFactory.initElements(driver, MainPage.class);
-    }
 
     @Test
     public void signInTest() throws InterruptedException {
@@ -52,8 +40,4 @@ public class MainPageTest {
         Assert.assertEquals("Email is invalid or already taken", error);
     }
 
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
 }
